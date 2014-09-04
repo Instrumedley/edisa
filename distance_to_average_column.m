@@ -6,6 +6,7 @@ for i = 1:NumberOfConditions
    NumberOfTimePoints(i) = length(m.timepoints{i});
 end
 
+
 matrix=m.submatrix;
 
 NumberOfColumns = size(matrix,2);
@@ -21,6 +22,7 @@ distance_matrix = squareform(Mypdist(cols,'correlation'));
 d=distance_matrix(NumberOfConditions+1,1:NumberOfConditions);
 
 %d_struct=d;
+%test of github
 d_struct = struct('pearson_distance', {d}, 'genenumbers', {m.genenumbers}, 'conditionnumbers', {m.conditionnumbers});
 
 
